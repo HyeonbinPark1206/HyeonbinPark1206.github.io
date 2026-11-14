@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hyeonbin Park</title>
+  <meta name="description" content="M.S. student at ISPL, Dong-A University, working on multi-scale rendering and artifact reduction for 3D Gaussian Splatting.">
+  <meta property="og:title" content="Hyeonbin Park">
+  <meta property="og:description" content="M.S. student at ISPL, Dong-A University — 3D Gaussian Splatting">
+  <meta property="og:image" content="https://hyeonbinpark1206.github.io/assets/img/research/fig-teaser.webp">
+  <script>
+    // 기본은 영어. ?lang=ko 또는 이전에 고른 언어가 있으면 그쪽으로.
+    (function () {
+      var q = new URLSearchParams(location.search).get('lang'), s = null;
+      try { s = localStorage.getItem('lang'); } catch (e) {}
+      document.documentElement.lang = (q || s) === 'ko' ? 'ko' : 'en';
+    })();
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+<div class="page">
+
+  <div class="lang" role="group" aria-label="Language"><button type="button" data-l="en">EN</button><button type="button" data-l="ko">KO</button></div>
+
+  <header class="intro">
+    <div class="text">
+      <h1>Hyeonbin Park <span class="kr">박현빈</span></h1>
+      <p lang="en">I am a master's student at the <a href="https://dauispl.quv.kr/">Image Signal Processing Lab (ISPL)</a>, Dong-A University, advised by Prof. Dongsan Jun.</p>
+      <p lang="en">I work on <b>3D Gaussian Splatting</b>, focusing on <b>multi-scale rendering</b> and <b>rendering artifact reduction</b>, in particular reducing the color shifts and loss of detail that appear when a scene is rendered at a resolution different from the one used in training. I also study video coding (VVC, HEVC) through lab projects.</p>
+      <p lang="en">As an undergraduate, I led the team that built <b>YOMI</b>, a humanoid robot running speech recognition, an LLM, vision and motor control on a single Jetson.</p>
+      <p lang="ko">동아대학교 <a href="https://dauispl.quv.kr/">영상신호처리연구실(ISPL)</a>에서 전동산 교수님의 지도를 받는 석사과정 학생입니다.</p>
+      <p lang="ko"><b>3D Gaussian Splatting</b>의 <b>다중 스케일 렌더링</b>과 <b>렌더링 아티팩트 저감</b>을 연구합니다. 특히 학습 때와 다른 해상도로 장면을 렌더링할 때 생기는 색 왜곡과 디테일 손실을 줄이는 방법을 연구하고 있습니다. 연구실 과제로 비디오 코딩(VVC, HEVC)도 공부하고 있습니다.</p>
+      <p lang="ko">학부 때는 음성 인식, LLM, 비전, 모터 제어를 Jetson 한 대에서 구동하는 휴머노이드 로봇 <b>YOMI</b>의 개발을 팀장으로 이끌었습니다.</p>
+      <p class="links">
+        <a href="mailto:hbpark@donga-ispl.kr">Email</a> /
+        <a href="https://scholar.google.com/citations?user=UpOODukAAAAJ">Google Scholar</a> /
+        <a href="https://github.com/HyeonbinPark1206">GitHub</a>
+        <!-- CV PDF가 생기면: / <a href="assets/cv.pdf">CV</a> -->
+      </p>
+    </div>
+    <img class="photo" src="assets/img/profile.jpg" alt="Hyeonbin Park" width="400" height="400">
+  </header>
+
+  <section>
+    <h2>News</h2>
+    <ul class="news">
+      <li><time>2026.07</time><span lang="en">Our paper on multi-scale 3DGS was accepted to <i>Mathematics</i>.</span><span lang="ko">다중 스케일 3DGS 논문이 <i>Mathematics</i>에 게재 승인되었습니다.</span></li>
+      <li><time>2026.06</time><span lang="en">Selected as a KOSAF Master's Scholar in Science and Engineering.</span><span lang="ko">한국장학재단 이공계 석사 우수장학생으로 선정되었습니다.</span></li>
+      <li><time>2026.03</time><span lang="en">Joined ISPL at Dong-A University as an M.S. student.</span><span lang="ko">동아대학교 영상신호처리연구실에 석사과정으로 합류했습니다.</span></li>
+      <li><time>2025.11</time><span lang="en">Received the Silver Award at the KDCS Undergraduate Paper Competition for YOMI.</span><span lang="ko">YOMI 연구로 한국디지털콘텐츠학회 대학생논문경진대회 은상을 수상했습니다.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
+    <div class="item featured">
+      <a class="thumb" href="https://www.mdpi.com/2227-7390/14/15/2713"><img src="assets/img/research/thumb-aco-egr.webp" alt="ACO-EGR overview" loading="lazy"></a>
+      <div>
+        <a class="title" href="https://www.mdpi.com/2227-7390/14/15/2713">Adaptive-Scale Color Offset and Error-Guided Gaussian Reallocation for Multi-Scale 3D Gaussian Splatting</a>
+        <div class="au"><b>Hyeonbin Park</b>*, Yooho Lee*, Dongho Lee, Dongsan Jun</div>
+        <div class="venue"><i>Mathematics</i>, 2026</div>
+        <div class="btns"><a href="https://www.mdpi.com/2227-7390/14/15/2713">paper</a></div>
+        <p lang="en">Scale-specific color offsets and error-guided reallocation of low-contribution Gaussians improve coarse-scale rendering without changing the renderer.</p>
+        <p lang="ko">Gaussian마다 스케일별 색 보정값을 학습하고 기여가 낮은 Gaussian을 오차가 큰 영역으로 옮겨, 렌더러를 바꾸지 않고 저해상도 렌더링 품질을 높였습니다.</p>
+      </div>
+    </div>
+
+    <h3 lang="en">Domestic conferences and patent</h3><h3 lang="ko">국내 학술대회 및 특허</h3>
+    <ul class="plain">
+      <li><span class="t">예비유아교사 교육용 모의수업 로봇을 위한 사용자 인터랙션 모듈</span><br><b>박현빈</b>, 오준서, 김도현, 서정일, 최영림 · <span lang="en">KDCS Fall Conference 2025, <em>Silver Award</em></span><span lang="ko">한국디지털콘텐츠학회 추계학술대회 2025, <em>은상</em></span></li>
+      <li><span class="t">예비유아교사 모의수업 로봇용 사용자 인터랙션 모듈 중 모터 및 페이스</span><br>오준서, <b>박현빈</b>, 김도현, 최영림, 서정일 · <span lang="en">KDCS Fall Conference 2025, <em>Bronze Award</em></span><span lang="ko">한국디지털콘텐츠학회 추계학술대회 2025, <em>동상</em></span></li>
+      <li><span class="t">자모 기반 정렬을 활용한 VITS 한국어 TTS와 예비유아교사 교육용 로봇 적용 연구</span><br>김도현, <b>박현빈</b>, 오준서, 서정일, 최영림 · <span lang="en">KDCS Fall Conference 2025, <em>Bronze Award</em></span><span lang="ko">한국디지털콘텐츠학회 추계학술대회 2025, <em>동상</em></span></li>
+      <li><span class="t">유아 감정모사 기반 예비교사 훈련용 피지컬 AI 로봇 시스템</span><br><span lang="en">Korean Patent Application No. 10-2025-0184890</span><span lang="ko">특허 출원 제10-2025-0184890호</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="item" id="yomi">
+      <a class="thumb" href="https://github.com/HyeonbinPark1206/4IU_RobotAI"><img src="assets/img/yomi/yomi-card.webp" alt="YOMI robot and its facial expressions" loading="lazy"></a>
+      <div>
+        <a class="title" href="https://github.com/HyeonbinPark1206/4IU_RobotAI">YOMI — Humanoid Robot for Pre-service Kindergarten Teachers</a>
+        <div class="venue"><span lang="en">Undergraduate capstone, 2025 · Team lead (team of 6)</span><span lang="ko">학부 졸업작품, 2025 · 팀장 (6인 팀)</span></div>
+        <div class="btns"><a href="https://github.com/HyeonbinPark1206/4IU_RobotAI">code</a></div>
+        <p lang="en">A robot that listens, answers like a 5–6-year-old and expresses emotion through its face and arms. I built the real-time Korean speech recognition and the multithreaded integration core that runs speech, LLM, vision, touch and motors together on a Jetson Orin NX.</p>
+        <p lang="ko">말을 알아듣고 5~6세 유아처럼 대답하며 표정과 팔 동작으로 감정을 표현하는 로봇입니다. 실시간 한국어 음성 인식과, Jetson Orin NX에서 음성·LLM·비전·터치·모터를 함께 돌리는 멀티스레드 통합 코어를 개발했습니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 lang="en">Research Projects</h2><h2 lang="ko">참여 과제</h2>
+    <!-- TODO: 참여 과제 정보를 받으면 아래 형식으로 채우기. 항목 하나 = <li> 하나.
+         <li><time>2026 –</time><span lang="en"><b>Project title in English</b><br><small>Funding agency · Role</small></span><span lang="ko"><b>과제명</b><br><small>지원 기관 · 담당 역할</small></span></li> -->
+    <ul class="tl">
+    </ul>
+  </section>
+
+  <section class="two">
+    <div>
+      <h2 lang="en">Education &amp; Experience</h2><h2 lang="ko">학력 및 경력</h2>
+      <ul class="tl">
+        <li><time>2026 –</time><span lang="en"><b>M.S., Computer Engineering</b>, Dong-A University<br><small>Image Signal Processing Lab · advisor Prof. Dongsan Jun</small></span><span lang="ko"><b>동아대학교 컴퓨터공학과 석사과정</b><br><small>영상신호처리연구실 · 지도 전동산 교수님</small></span></li>
+        <li><time>2020 – 2026</time><span lang="en"><b>B.S., Computer Engineering</b>, Dong-A University</span><span lang="ko"><b>동아대학교 컴퓨터공학과 학사</b></span></li>
+      </ul>
+    </div>
+    <div>
+      <h2 lang="en">Honors</h2><h2 lang="ko">수상 및 장학</h2>
+      <ul class="tl">
+        <li><time>2026</time><span lang="en">KOSAF Master's Scholarship in Science and Engineering</span><span lang="ko">한국장학재단 이공계 석사 우수장학</span></li>
+        <li><time>2025</time><span lang="en">Excellence Award, Dong-A University FairDay</span><span lang="ko">동아대학교 FairDay 우수상</span></li>
+        <li><time>2025</time><span lang="en">Technology Award, BDIA Side Project Exhibition</span><span lang="ko">BDIA 사이드 프로젝트 전시회 기술상</span></li>
+        <li><time>2025</time><span lang="en">Encouragement Award, National University Software Forum</span><span lang="ko">전국대학 SW 성과 공유 포럼 장려상</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <dl class="skills">
+      <dt>Languages</dt><dd>Python, C++</dd>
+      <dt>3D Vision &amp; Graphics</dt><dd>3D Gaussian Splatting, PyTorch, CUDA</dd>
+      <dt>Robotics &amp; Systems</dt><dd>ROS, NVIDIA Jetson, Linux</dd>
+    </dl>
+  </section>
+
+  <footer>© 2026 Hyeonbin Park · <span lang="en">Last updated</span><span lang="ko">마지막 수정</span> 2026.11</footer>
+</div>
+<script>
+  (function () {
+    var b = document.querySelectorAll('.lang button');
+    function set(l) {
+      document.documentElement.lang = l;
+      b.forEach(function (x) { x.setAttribute('aria-pressed', x.dataset.l === l); });
+      try { localStorage.setItem('lang', l); } catch (e) {}
+    }
+    b.forEach(function (x) { x.addEventListener('click', function () { set(x.dataset.l); }); });
+    b.forEach(function (x) { x.setAttribute('aria-pressed', x.dataset.l === document.documentElement.lang); });
+  })();
+</script>
+</body>
+</html>
